@@ -32,18 +32,19 @@ const ListButtons = () => {
             description: "ReactJS è una libreria JavaScript per costruire interfacce utente, in particolare applicazioni a pagina singola. Consente agli sviluppatori di creare componenti UI riutilizzabili e di gestire efficacemente lo stato dell'applicazione."
         }
     ];
-    return <div className="buttons-list">
-        {languages.map(language => (
-            <div className="button" key={language.id}>
-                <div className="button-title">
-                    <button>{language.title}</button>
+    return <>
+        <h1>Learn Web development</h1>
+        <div className="buttons-list">
+            {languages.map(language => (
+                <div className="button" key={language.id}>
+                    <div className="button-title">
+                        <span>{language.title}</span>
+                    </div>
+                    <div>{language.description}</div>
                 </div>
-                <div>{language.description}</div>
-            </div>
-        ))}
-
-    </div>
-
+            ))}
+        </div>
+    </>
 }
 
 export default ListButtons
